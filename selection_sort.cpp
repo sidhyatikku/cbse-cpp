@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-
-void selection_sort(int *a,int n)
+ 
+void selection_sort(int *a,int n)              // Function that performs selection sort
 {
     for(int i=0;i<n;i++)
     {
@@ -21,10 +21,10 @@ void selection_sort(int *a,int n)
 int main()
 {
     int n;
-    cout<<"Enter the size of array\n";
+    cout<<"Enter the size of array\n";        //Receives size of array
     cin>>n;
     int a[n];
-    cout<<"Enter elements of array\n";
+    cout<<"Enter elements of array\n";         //Takes array elements as input that has to be sorted
     for(int i=0;i<n;i++)
         cin>>a[i];
     selection_sort(a,n);
