@@ -1,17 +1,28 @@
-#include <iostream.h>
-#include <conio.h>
-void main() {
-	int x=0,y=0,z=1,n,i;
-	cout<<"Enter nth term: ";
-	cin>>n;
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+int fib(int n) 
+{ 
 
-	for(i=0;i<n;i++)
-	{
-		cout<<endl<<y;
-		x=y+z;
-		y=z;
-		z=x;
-	}
-	getch();
-
-}
+  int f[n+2];
+  int i; 
+  f[0] = 0; 
+  f[1] = 1; 
+  
+  for (i = 2; i <= n; i++) 
+  { 
+      f[i] = f[i-1] + f[i-2]; 
+  } 
+  
+  return f[n]; 
+} 
+  
+int main () 
+{ 
+  int n ;
+  cout<<"Enter any number : ";
+  cin>>n;
+  cout<<"Fibbonacci series " <<fib(n);
+  getch();
+  return 0; 
+} 
